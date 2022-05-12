@@ -27,7 +27,8 @@
 
           <ul class="list-unstyled">
             <li>
-              <a href="#!" class="text-white"><i class="far fa-file-alt fa-fw fa-sm me-2"></i>List all articles</a>
+              <a href="{% url 'articles:articles-list' %}" class="text-white"><i class="far fa-file-alt fa-fw fa-sm me-2"></i>List all
+                articles</a>
             </li>
           </ul>
         </div>
@@ -37,7 +38,7 @@
 
           <ul class="list-unstyled">
             <li>
-              <a href="#!" class="text-white"><i class="fas fa-briefcase fa-fw fa-sm me-2"></i>Admin panel</a>
+              <a href="{% url 'admin:index' %}" class="text-white"><i class="fas fa-briefcase fa-fw fa-sm me-2"></i>Admin panel</a>
             </li>
           </ul>
         </div>
@@ -47,7 +48,8 @@
 
           <ul class="list-unstyled">
             <li>
-              <a href="#!" class="text-white"><i class="fas fa-envelope fa-fw fa-sm me-2"></i>Contact us</a>
+              <a href="{% url 'contacts:send-email' %}" class="text-white"><i class="fas fa-envelope fa-fw fa-sm me-2"></i>Contact
+                us</a>
             </li>
           </ul>
         </div>
