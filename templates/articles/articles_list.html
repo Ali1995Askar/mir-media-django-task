@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}
+articles-list
+{% endblock %}
+
+{% block content %}
+<h3> Articles</h3><br>
+ {% for article in articles %}
+ <br>
+       {% include "partials/article_card.html" %}
+ <br>
+ {% endfor %}
+
+  <div class='pagination justify-content-center'>
+    {% if page_obj.has_previous %}
+      <a href='{% url "articles:articles-list" %}?page={{ page_obj.previous_page_number }}'>Previous </a>
+    {% endif %}
+
+    <span class='mx-4'>
+      Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+    </span>
+
+    {% if page_obj.has_next %}
+      <a href='{% url "articles:articles-list" %}?page={{ page_obj.next_page_number }}' > Next</a>
+    {% endif %}
+  </div>
+
+</div>
+{% endblock %}

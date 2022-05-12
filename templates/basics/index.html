@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}
+home
+{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+  <h1 class="display-4">Hello, Mir Media!</h1>
+  <p class="lead">This is a simple django project with unit test.</p>
+  <hr class="my-4">
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="{% url 'articles:articles-list'%}" role="button">Browse Articles</a>
+  </p>
+</div>
+
+{% endblock %}

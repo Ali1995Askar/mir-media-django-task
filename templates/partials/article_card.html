@@ -1,0 +1,17 @@
+<div class="card text-center">
+  <div class="card-header">
+     <h5 class="card-title">
+       {{article.title}}
+     </h5>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{article.author}}</h5>
+    <p class="card-text">{{article.content |truncatewords:20}}</p>
+    <a href="{% url 'articles:article-details' article.id article.slug%}" class="btn btn-primary">Read full article</a>
+  </div>
+  <div class="card-footer text-muted">
+      By {{article.author}} at {{article.pub_date}}
+  </div>
+</div>
+<hr>
+

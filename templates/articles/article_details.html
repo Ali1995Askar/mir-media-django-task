@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}
+article-{{ article.slug }}
+{% endblock %}
+
+{% block content %}
+     <div class="jumbotron">
+       <h1 class="display-6">{{ article.title }}</h1>
+       <h6 class="display-10">Author: {{ article.author.get_full_name }}  ->  ({{ article.author.email }})</h6>
+       <h6 class="display-10">title: {{ article.title }}</h6>
+       <h6 class="display-10">slug: {{ article.slug }}</h6>
+       <h6 class="display-10">publish at: {{ article.pub_date }}</h6>
+
+       <hr class="my-4">
+       <p class="lead">{{ article.content }}</p>
+       <hr class="my-4">
+     </div>
+{% endblock %}
+
+
